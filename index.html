@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ram Kumar | Assistant Professor -II | Amity University</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   ROOT & RESET
+══════════════════════════════════════ */
+:root {
+  --white: #ffffff;
+  --off-white: #f8f7f4;
+  --paper: #f2efe9;
+  --ink: #1a1a1a;
+  --ink-soft: #3d3d3d;
+  --ink-muted: #6b6b6b;
+  --ink-faint: #a8a8a8;
+  --divider: #e5e2db;
+  --amity-red: #c0272d;
+  --amity-red-light: #e8474d;
+  --amity-red-pale: #fdf2f2;
+  --amity-navy: #1c3054;
+  --amity-navy-soft: #2d4a7a;
+  --gold: #b8963e;
+  --gold-pale: #fdf6e9;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+  --radius: 2px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ══════════════════════════════════════
+   TOP INSTITUTE BANNER
+══════════════════════════════════════ */
+.institute-banner {
+  background: var(--amity-navy);
+  padding: 0.7rem 4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  position: relative; z-index: 200;
+}
+.institute-brand {
+  display: flex; align-items: center; gap: 1.2rem;
+}
+.institute-logo {
+  width: 54px; height: 54px;
+  background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.logo-svg { width: 100%; height: 100%; object-fit: contain; }
+.institute-text {}
+.institute-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem; font-weight: 600;
+  color: white; line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+.institute-sub {
+  font-size: 0.72rem; font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.05em;
+  margin-top: 0.1rem;
+}
+.institute-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════
+   MAIN NAV
+══════════════════════════════════════ */
+nav.main-nav {
+  position: sticky; top: 0; z-index: 150;
+  background: var(--white);
+  border-bottom: 1px solid var(--divider);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4rem;
+  height: 56px;
+  box-shadow: var(--shadow-sm);
+}
+.nav-identity {
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.nav-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--amity-red);
+}
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--ink); letter-spacing: 0.02em;
+}
+.nav-links {
+  display: flex; list-style: none; gap: 0;
+}
+.nav-links li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--ink-muted);
+  padding: 0 1.1rem;
+  height: 56px; display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--amity-red);
+  border-bottom-color: var(--amity-red);
+}
+
+/* ══════════════════════════════════════
+   PAGES SYSTEM
+══════════════════════════════════════ */
+.page { display: block; }
+
+
+/* ══════════════════════════════════════
+   HOME — NO SCROLL HERO
+══════════════════════════════════════ */
+#page-home {
+  height: calc(100vh - 56px - 68px);
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LEFT HERO */
+.hero-left {
+  padding: 3.5rem 4rem 3rem 4rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 1px solid var(--divider);
+  position: relative; background: var(--white);
+  overflow: hidden;
+}
+.hero-left::before {
+  content: '';
+  position: absolute; top: -80px; left: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(192,39,45,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-top {}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--amity-red-pale);
+  border: 1px solid rgba(192,39,45,0.15);
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.8rem;
+}
+.hero-badge span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.12em;
+  color: var(--amity-red); text-transform: uppercase;
+  font-weight: 500;
+}
+.hero-badge-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--amity-red); flex-shrink: 0;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.hero-title-area { margin-bottom: 1.8rem; }
+.hero-dr {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem; font-weight: 500;
+  color: var(--amity-red); letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 0.5rem;
+  display: block;
+}
+.hero-name-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 700; line-height: 1.0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8rem;
+}
+.hero-position {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem; font-weight: 400;
+  color: var(--ink-soft); line-height: 1.5;
+}
+.hero-position strong {
+  color: var(--amity-navy); font-weight: 600;
+}
+
+.hero-research-tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.rtag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem; font-weight: 400;
+  padding: 0.3rem 0.8rem;
+  background: var(--off-white);
+  border: 1px solid var(--divider);
+  color: var(--ink-soft); border-radius: 1px;
+  transition: background var(--transition);
+}
+.rtag:hover { background: var(--paper); }
+
+.hero-stats-row {
+  display: flex; gap: 1.5rem; margin-bottom: 2.8rem;
+}
+.hstat {
+  flex: 1; padding: 1.8rem 1.5rem;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+  position: relative; overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hstat:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(192,39,45,0.08);
+}
+.hstat::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--amity-red), var(--amity-red-light));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+}
+.hstat:hover::before { transform: scaleX(1); }
+.hstat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem; font-weight: 700;
+  color: var(--amity-red); line-height: 1;
+  display: block; margin-bottom: 0.4rem;
+}
+.hstat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  color: var(--ink-muted); text-transform: uppercase;
+  display: block; font-weight: 500;
+}
+
+.hero-actions {
+  display: flex; gap: 1.2rem; flex-wrap: wrap;
+}
+.btn-red {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 2.2rem;
+  background: linear-gradient(135deg, var(--amity-red), #a01e23);
+  color: white; border: none; border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(192,39,45,0.25);
+  transition: all 0.3s ease;
+}
+.btn-red:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(192,39,45,0.35); 
+}
+.btn-outline-navy {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 2.2rem;
+  background: transparent;
+  color: var(--amity-navy);
+  border: 2px solid var(--amity-navy);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.btn-outline-navy:hover { 
+  background: var(--amity-navy); color: white; 
+  box-shadow: 0 8px 20px rgba(28,48,84,0.2);
+  transform: translateY(-2px);
+}
+.btn-cv {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 2.2rem;
+  background: var(--gold);
+  color: white; border: none; border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(184,150,62,0.25);
+  transition: all 0.3s ease;
+}
+.btn-cv:hover {
+  background: #a38230; transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(184,150,62,0.35);
+}
+
+/* RIGHT HERO — photo + quick info */
+.hero-right {
+  background: var(--off-white);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 2.5rem 2.5rem;
+  gap: 1.8rem;
+  position: relative;
+}
+.hero-right::before {
+  content: '';
+  position: absolute; bottom: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle at bottom right, rgba(28,48,84,0.06), transparent 70%);
+}
+
+/* PHOTO FRAME */
+.profile-photo-wrap {
+  position: relative; flex-shrink: 0;
+}
+.profile-photo-ring {
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 3px var(--amity-red), var(--shadow-lg);
+  overflow: hidden; cursor: pointer;
+  background: linear-gradient(135deg, #e8edf5, #c8d0e0);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  transition: box-shadow var(--transition);
+  position: relative;
+}
+.profile-photo-ring:hover {
+  box-shadow: 0 0 0 3px var(--amity-red-light), var(--shadow-lg);
+}
+.profile-photo-ring img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: none;
+}
+.profile-photo-ring.has-photo img { display: block; }
+.profile-photo-ring.has-photo .photo-hint { display: none; }
+.photo-hint {
+  text-align: center; pointer-events: none; padding: 1rem;
+}
+.photo-hint-icon { font-size: 2.5rem; opacity: 0.4; display: block; margin-bottom: 0.4rem; }
+.photo-hint-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem; letter-spacing: 0.1em;
+  color: var(--ink-faint); text-transform: uppercase;
+  line-height: 1.6;
+}
+.photo-edit-btn {
+  position: absolute; bottom: 6px; right: 6px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--amity-red);
+  color: white; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition);
+}
+.photo-edit-btn:hover { background: #a01e23; }
+#photoFileInput { display: none; }
+
+/* QUICK INFO CARD */
+.quick-info {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--divider);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem 1.8rem;
+}
+.qi-row {
+  display: flex; align-items: flex-start; gap: 0.8rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+.qi-row:last-child { border-bottom: none; }
+.qi-icon {
+  font-size: 1rem; flex-shrink: 0;
+  width: 1.5rem; text-align: center;
+  opacity: 0.7; margin-top: 0.05rem;
+}
+.qi-content {}
+.qi-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem; letter-spacing: 0.12em;
+  color: var(--ink-faint); text-transform: uppercase;
+}
+.qi-value {
+  font-size: 0.82rem; color: var(--ink-soft);
+  line-height: 1.4; font-weight: 400;
+}
+.qi-value a { color: var(--amity-red); }
+
+/* ══════════════════════════════════════
+   INNER PAGES — COMMON
+══════════════════════════════════════ */
+.inner-page {
+  min-height: calc(100vh - 56px - 68px);
+  padding: 3.5rem 4rem 5rem;
+  background: var(--white);
+}
+
+.page-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--amity-red);
+  margin-bottom: 3rem;
+}
+.page-header-left {}
+.page-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.18em;
+  color: var(--amity-red); text-transform: uppercase;
+  margin-bottom: 0.4rem; display: block;
+}
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem; font-weight: 700;
+  color: var(--ink); line-height: 1;
+}
+.page-subtitle {
+  font-size: 0.85rem; color: var(--ink-faint);
+  font-style: italic; font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+}
+
+/* ══════════════════════════════════════
+   ABOUT PAGE
+══════════════════════════════════════ */
+.about-layout { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; }
+
+.about-bio p {
+  font-size: 1rem; line-height: 1.85;
+  color: var(--ink-soft); margin-bottom: 1.3rem;
+  font-family: 'DM Sans', sans-serif; font-weight: 300;
+}
+.about-bio p:first-child::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 700;
+  float: left; line-height: 0.8;
+  padding-right: 0.2rem; padding-top: 0.4rem;
+  color: var(--amity-red);
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  color: var(--amity-red); text-transform: uppercase;
+  margin-bottom: 1rem; display: block;
+}
+
+.teaching-list {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.teaching-item {
+  display: flex; align-items: center; gap: 0.8rem;
+  padding: 0.7rem 1rem;
+  background: var(--off-white); border-left: 3px solid var(--amity-red);
+  font-size: 0.9rem; color: var(--ink-soft);
+}
+.teaching-item::before { content: '⟶'; color: var(--amity-red); font-size: 0.8rem; }
+
+.about-sidebar {}
+.sidebar-card {
+  background: var(--off-white);
+  border: 1px solid var(--divider);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.sidebar-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--divider);
+}
+.skill-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem; letter-spacing: 0.06em;
+  color: var(--ink-soft); padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--divider);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.skill-item:last-child { border-bottom: none; }
+.skill-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amity-red); flex-shrink: 0; }
+
+.admin-badge {
+  display: inline-block;
+  background: var(--amity-navy);
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; letter-spacing: 0.08em;
+  padding: 0.4rem 0.9rem; margin: 0.3rem 0.3rem 0 0;
+}
+
+/* ══════════════════════════════════════
+   EDUCATION PAGE
+══════════════════════════════════════ */
+.edu-timeline { position: relative; padding-left: 2.5rem; }
+.edu-timeline::before {
+  content: ''; position: absolute;
+  left: 0; top: 8px; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, var(--amity-red) 0%, var(--divider) 100%);
+}
+.edu-entry {
+  position: relative; margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--divider);
+}
+.edu-entry:last-child { border-bottom: none; margin-bottom: 0; }
+.edu-node {
+  position: absolute; left: -2.85rem; top: 5px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: white; border: 3px solid var(--amity-red);
+  box-shadow: 0 0 0 4px var(--amity-red-pale);
+}
+.edu-year-pill {
+  display: inline-block;
+  background: var(--amity-red-pale);
+  color: var(--amity-red);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; letter-spacing: 0.1em;
+  padding: 0.25rem 0.8rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+.edu-degree {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 0.3rem;
+}
+.edu-institution {
+  font-size: 0.95rem; font-weight: 500;
+  color: var(--amity-navy); margin-bottom: 0.8rem;
+}
+.edu-detail {
+  font-size: 0.88rem; color: var(--ink-muted); line-height: 1.7;
+}
+.edu-thesis-box {
+  margin-top: 1rem; padding: 1rem 1.5rem;
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+}
+.edu-thesis-box .t-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem; letter-spacing: 0.15em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 0.3rem; display: block;
+}
+.edu-thesis-box .t-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-style: italic; font-weight: 600;
+  color: var(--ink-soft); line-height: 1.5;
+}
+.edu-thesis-box .t-advisor {
+  font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.3rem;
+}
+
+/* ══════════════════════════════════════
+   PUBLICATIONS PAGE
+══════════════════════════════════════ */
+.pub-filters {
+  display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.pf-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--divider);
+  color: var(--ink-muted); background: white;
+  cursor: pointer; transition: all var(--transition);
+}
+.pf-btn.active, .pf-btn:hover {
+  border-color: var(--amity-red); color: var(--amity-red);
+  background: var(--amity-red-pale);
+}
+
+.pub-grid { display: flex; flex-direction: column; gap: 1rem; }
+.pub-entry {
+  display: grid; grid-template-columns: 56px 1fr auto;
+  gap: 1.5rem; align-items: start;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--divider);
+  background: white;
+  transition: border-color var(--transition), box-shadow var(--transition), transform 0.2s;
+}
+.pub-entry:hover {
+  border-color: var(--amity-red);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+.pub-index {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--divider); line-height: 1; text-align: right;
+}
+.pub-body {}
+.pub-title-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 600; font-style: italic;
+  color: var(--ink); margin-bottom: 0.35rem; line-height: 1.4;
+}
+.pub-journal-text {
+  font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+.pub-doi { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--amity-red); margin-bottom: 0.6rem; word-break: break-all; }
+.pub-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.badge-scie {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  background: #eef4ff; border: 1px solid #b0c8f0; color: #2d5aa0;
+}
+.badge-scopus {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  background: #fff4ee; border: 1px solid #f0b896; color: #b55a1a;
+}
+.badge-accepted {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  background: #efffef; border: 1px solid #96d096; color: #1a7a1a;
+}
+.badge-review {
+  font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  background: #fffcee; border: 1px solid #e0d096; color: #7a6a1a;
+}
+.pub-year-col {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--amity-red); white-space: nowrap;
+}
+
+/* ══════════════════════════════════════
+   AWARDS PAGE
+══════════════════════════════════════ */
+.awards-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.award-card {
+  padding: 1.8rem 2rem;
+  border: 1px solid var(--divider);
+  background: white;
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.award-card:hover {
+  border-color: var(--amity-red);
+  box-shadow: var(--shadow-md);
+}
+.award-icon-wrap {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: var(--amity-red-pale);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+.award-body {}
+.award-title-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 0.3rem;
+}
+.award-desc-text {
+  font-size: 0.82rem; color: var(--ink-muted); line-height: 1.55;
+}
+
+/* Events section */
+.events-section { margin-top: 3.5rem; }
+.events-section .section-label { margin-bottom: 1.5rem; }
+.events-grid { display: flex; flex-direction: column; gap: 0.8rem; }
+.event-row {
+  display: grid; grid-template-columns: 90px 1fr;
+  gap: 1.5rem; align-items: start;
+  padding: 1.1rem 1.5rem;
+  border-left: 3px solid var(--divider);
+  background: var(--off-white);
+  transition: border-color var(--transition);
+}
+.event-row:hover { border-left-color: var(--amity-red); }
+.event-year-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem; font-weight: 500;
+  color: var(--amity-red); letter-spacing: 0.08em;
+}
+.event-desc {
+  font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6;
+}
+.event-desc strong { color: var(--ink); }
+
+/* ══════════════════════════════════════
+   GALLERY PAGE
+══════════════════════════════════════ */
+.gallery-intro-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-style: italic;
+  color: var(--ink-muted); margin-bottom: 2.5rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+.g-item {
+  position: relative; overflow: hidden;
+  background: var(--paper);
+  border: 2px dashed var(--divider);
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.5rem;
+  transition: border-color var(--transition);
+}
+.g-item:hover { border-color: var(--amity-red); border-style: solid; }
+.g-item.wide { grid-column: span 2; }
+.g-item.tall { grid-row: span 2; }
+.g-item img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  display: none;
+}
+.g-item.has-img img { display: block; }
+.g-item.has-img .g-placeholder { display: none; }
+.g-placeholder {
+  text-align: center; pointer-events: none; padding: 1rem;
+}
+.g-placeholder-icon { font-size: 1.8rem; opacity: 0.25; display: block; margin-bottom: 0.3rem; }
+.g-placeholder-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem; letter-spacing: 0.1em;
+  color: var(--ink-faint); text-transform: uppercase; line-height: 1.6;
+}
+.g-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(28,48,84,0.7) 0%, transparent 60%);
+  opacity: 0; transition: opacity var(--transition);
+  display: flex; align-items: flex-end; padding: 1rem;
+}
+.g-item.has-img:hover .g-overlay { opacity: 1; }
+.g-overlay-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem; letter-spacing: 0.1em;
+  color: white; text-transform: uppercase;
+}
+#galleryFileInput { display: none; }
+
+/* ══════════════════════════════════════
+   CONTACT PAGE
+══════════════════════════════════════ */
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.contact-info-block { display: flex; flex-direction: column; gap: 1.5rem; }
+.contact-card {
+  display: flex; gap: 1.2rem; align-items: flex-start;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--divider);
+  background: var(--off-white);
+  transition: border-color var(--transition);
+}
+.contact-card:hover { border-color: var(--amity-red); }
+.cc-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: var(--amity-red);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: white;
+}
+.cc-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem; letter-spacing: 0.14em;
+  color: var(--ink-faint); text-transform: uppercase; margin-bottom: 0.25rem;
+}
+.cc-value { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; }
+
+.references-block { display: flex; flex-direction: column; gap: 1.2rem; }
+.ref-card {
+  padding: 1.5rem 1.8rem;
+  border: 1px solid var(--divider);
+  background: white;
+  border-left: 4px solid var(--amity-navy);
+  transition: box-shadow var(--transition);
+}
+.ref-card:hover { box-shadow: var(--shadow-md); }
+.ref-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.ref-title { font-size: 0.82rem; color: var(--amity-navy); font-weight: 500; margin-bottom: 0.2rem; }
+.ref-inst { font-size: 0.8rem; color: var(--ink-muted); line-height: 1.5; margin-bottom: 0.5rem; }
+.ref-contacts { display: flex; gap: 1rem; flex-wrap: wrap; }
+.ref-contact-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; color: var(--amity-red);
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: var(--amity-navy);
+  padding: 1.5rem 4rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-left {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; color: rgba(255,255,255,0.7);
+  font-style: italic;
+}
+.footer-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35); text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page.active .animate-1 { animation: fadeUp 0.5s ease forwards; }
+.page.active .animate-2 { animation: fadeUp 0.5s 0.1s ease both; }
+.page.active .animate-3 { animation: fadeUp 0.5s 0.2s ease both; }
+.page.active .animate-4 { animation: fadeUp 0.5s 0.3s ease both; }
+.page.active .animate-5 { animation: fadeUp 0.5s 0.4s ease both; }
+
+/* ══════════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════════ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--off-white); }
+::-webkit-scrollbar-thumb { background: var(--amity-red); border-radius: 3px; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  #page-home { grid-template-columns: 1fr; height: auto; min-height: calc(100vh - 56px - 68px); }
+  .hero-right { display: none; }
+  .institute-banner { padding: 0.7rem 2rem; }
+  nav.main-nav { padding: 0 2rem; }
+  .inner-page { padding: 2.5rem 2rem 4rem; }
+  .hero-left { padding: 2.5rem 2rem; }
+}
+@media (max-width: 900px) {
+  .nav-links li a { padding: 0 0.7rem; font-size: 0.7rem; }
+  .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .awards-layout { grid-template-columns: 1fr; }
+  .pub-entry { grid-template-columns: 40px 1fr; }
+  .pub-year-col { display: none; }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .g-item.wide { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ INSTITUTE BANNER ══ -->
+<div class="institute-banner">
+  <div class="institute-brand">
+    <!-- Amity University Logo SVG placeholder — replace src with actual logo -->
+    <div class="institute-logo">
+      <img src="https://i.ibb.co/G4MZHB73/image.png" alt="Amity University" style="width: 100%; height: 100%; object-fit: contain; background: white;">
+    </div>
+    <div class="institute-text">
+      <div class="institute-name">Amity University Madhya Pradesh</div>
+      <div class="institute-sub">Department of Mathematics · Gwalior, India</div>
+    </div>
+  </div>
+  <div class="institute-right">Est. 2010 · NAAC Accredited</div>
+</div>
+
+<!-- ══ MAIN NAV ══ -->
+<nav class="main-nav">
+  <div class="nav-identity">
+    <div class="nav-dot"></div>
+    <span class="nav-name">Dr. Ram Kumar</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-home active">Home</a></li>
+    <li><a href="about.html" class="nav-about">About</a></li>
+    <li><a href="education.html" class="nav-education">Education</a></li>
+    <li><a href="publications.html" class="nav-publications">Publications</a></li>
+    <li><a href="awards.html" class="nav-awards">Awards & Events</a></li>
+    <li><a href="gallery.html" class="nav-gallery">Gallery</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- ══════════════════════════
+     PAGE: HOME (NO SCROLL)
+══════════════════════════ -->
+<div id="page-home" class="page active">
+  <div class="hero-left">
+    <div class="hero-top">
+      <div class="hero-badge animate-1">
+        <div class="hero-badge-dot"></div>
+        <span>Department of Mathematics · Amity University, Gwalior</span>
+      </div>
+      <div class="hero-title-area animate-2">
+        <span class="hero-dr">Assistant Professor -II</span>
+        <h1 class="hero-name-main">Dr. Ram Kumar</h1>
+        <p class="hero-position">
+          <strong>Department of Mathematics</strong><br>
+          Amity University Madhya Pradesh, Gwalior, India
+        </p>
+      </div>
+      <div class="hero-research-tags animate-3">
+        <span class="rtag">Number Theory</span>
+        <span class="rtag">Algebraic Geometry</span>
+        <span class="rtag">Elliptic Curves</span>
+        <span class="rtag">Hypergeometric Functions</span>
+        <span class="rtag">Finite Fields</span>
+        <span class="rtag">Algebraic Curves</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-stats-row animate-4">
+        <div class="hstat">
+          <span class="hstat-num">6+</span>
+          <span class="hstat-label">Indexed Papers</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num">SCIE</span>
+          <span class="hstat-label">Web of Science</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-num">IIT</span>
+          <span class="hstat-label">PhD from ISM Dhanbad</span>
+        </div>
+      </div>
+      <div class="hero-actions animate-5">
+        <button class="btn-red" onclick="window.location.href='publications.html'">View Publications</button>
+        <a href="cv.pdf" target="_blank" style="text-decoration: none;">
+          <button class="btn-cv">Download Full CV</button>
+        </a>
+        <button class="btn-outline-navy" onclick="window.location.href='contact.html'">Contact Me</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="profile-photo-wrap">
+      <div class="profile-photo-ring has-photo" style="cursor: default;">
+        <img src="https://i.ibb.co/PsgCnQpT/Whats-App-Image-2026-05-22-at-1-59-51-PM.jpg" alt="Dr. Ram Kumar" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+    <div class="quick-info">
+      <div class="qi-row">
+        <div class="qi-icon">🎓</div>
+        <div class="qi-content">
+          <div class="qi-label">Qualification</div>
+          <div class="qi-value">Ph.D. Mathematics · IIT (ISM) Dhanbad, 2020</div>
+        </div>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon">🏛️</div>
+        <div class="qi-content">
+          <div class="qi-label">Position</div>
+          <div class="qi-value">Assistant Professor-II, Amity University, Gwalior · Sept 2021–Present</div>
+        </div>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon">✉️</div>
+        <div class="qi-content">
+          <div class="qi-label">Email</div>
+          <div class="qi-value"><a href="mailto:ramkumarbhu1991@gmail.com">ramkumarbhu1991@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="qi-row">
+        <div class="qi-icon">📞</div>
+        <div class="qi-content">
+          <div class="qi-label">Phone</div>
+          <div class="qi-value">+91-9709775959</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-left">Dr. Ram Kumar · Assistant Professor -II, Mathematics · Amity University MP</div>
+  <div class="footer-right">Last updated: March 2025 · Portfolio</div>
+</footer>
+
+<script>
+/* ── PAGE NAVIGATION ── */
+
+/* ── GALLERY ── */
+let currentGI = null;
+function uploadGallery(idx) {
+  currentGI = idx;
+  document.getElementById('galleryFileInput').click();
+}
+document.getElementById('galleryFileInput').addEventListener('change', function(e) {
+  const file = e.target.files[0]; if (!file || currentGI === null) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    const item = document.querySelector(`.g-item[data-gi="${currentGI}"]`);
+    if (!item) return;
+    let img = item.querySelector('img');
+    if (!img) { img = document.createElement('img'); item.prepend(img); }
+    img.src = ev.target.result; img.style.display = 'block';
+    item.classList.add('has-img');
+  };
+  r.readAsDataURL(file);
+  this.value = '';
+});
+
+
+
+/* Hero CTA buttons */
+document.querySelectorAll('.btn-red, .btn-outline-navy').forEach(btn => {
+  btn.addEventListener('click', function() {
+    
+    const target = this.textContent.toLowerCase().includes('pub') ? 'publications.html' : 'contact.html';
+    window.location.href = target;
+
+  });
+});
+</script>
+</body>
+</html>
